@@ -7,6 +7,9 @@ import NotFound from "./pages/NotFound";
 import Shop from "./pages/Shop";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
+import Wishlist from "./pages/Wishlist";
+import CheckOut from "./pages/CheckOut";
+import { Toaster } from 'react-hot-toast';
 
 const PublicRoutes = () => {
     const user = JSON.parse(sessionStorage.getItem("user"));
@@ -20,6 +23,8 @@ const PrivateRoutes = () => {
 
 function App() {
     return (
+        <>       
+        <Toaster position="top-center" reverseOrder={false}></Toaster>
         <Routes>
             <Route element={<PublicRoutes />}>
                 <Route path="/login" element={<Login />} />
@@ -33,10 +38,14 @@ function App() {
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/itemDetail/:id" element={<ProductDetails />} />
                 <Route path="/cart" element={<Cart />} />
+                <Route path="/wishlist" element={<Wishlist />} />
+                <Route path="/checkOut" element={<CheckOut />} />
             </Route>
 
             <Route path="*" element={<NotFound />} />
         </Routes>
+        </>
+
     );
 }
 

@@ -14,4 +14,16 @@ export const getHomeProduct=async(limit)=>{
 
 }
 
+export const getUserProduct=async(id)=>{
+   
+   const response=await  api.get(`/wishlist?userId=${id}`)
+   return response.data
+
+}
+
+
+
+
+
+
     

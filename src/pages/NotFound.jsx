@@ -1,32 +1,34 @@
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
+
 function NotFound() {
-  return (
-    <div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-black text-white px-6">
+    return (
+        <div className="min-h-screen flex flex-col items-center justify-center bg-[#F1FAEE] px-6 text-center relative overflow-hidden">
+            <div className="absolute top-20 left-20 w-72 h-72 bg-[#457b9d]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#1D3557]/10 rounded-full blur-3xl"></div>
 
-  <h1 class="text-4xl font-bold mb-6">
-    VYOLO <span class="text-purple-500">Tech</span>
-  </h1>
+            <h1 className="text-3xl font-black mb-10 text-[#1D3557] tracking-wide">
+                VYOLO<span className="text-[#457b9d]">.</span>
+            </h1>
 
-  <div class="mb-6">
-    <div class="relative">
-      <div class="w-32 h-20 bg-yellow-400 rounded-full blur-sm"></div>
-      <div class="absolute left-10 top-8 w-0 h-0 border-l-8 border-r-8 border-b-16 border-yellow-500"></div>
-    </div>
-  </div>
+            <div className="relative mb-6">
+                <div className="text-[10rem] font-black text-[#1D3557]/5 leading-none select-none">404</div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                   
+                    
+                </div>
+            </div>
 
-  <h2 class="text-3xl font-bold mb-2">Oops! Page Not Found</h2>
-  <p class="text-gray-400 text-center max-w-md">
-    The page you are looking for might have been removed, renamed, or temporarily unavailable.
-  </p>
+            <h2 className="text-4xl font-black text-[#1D3557] mb-4 tracking-tight">Oops! Page Not Found</h2>
 
-  <Link to="/"
-     class="mt-6 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl font-semibold hover:scale-105 transition">
-    Go to Homepage
-  </Link>
 
-</div>
-
-  )
+            <Link
+                to="/"
+                className="px-10 py-4 bg-[#457b9d] text-white rounded-full font-bold shadow-[0_10px_20px_-10px_rgba(69,123,157,0.5)] hover:bg-[#36607a] hover:shadow-[0_20px_25px_-5px_rgba(69,123,157,0.4)] hover:-translate-y-1 transition-all duration-300"
+            >
+                Go to Homepage
+            </Link>
+        </div>
+    );
 }
 
-export default NotFound
+export default NotFound;

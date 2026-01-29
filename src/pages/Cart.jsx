@@ -1,65 +1,96 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useUser } from "../context/UserContext";
+import api from "../service/api";
+import CartCard from "../components/CartCard";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import {useCart} from "../context/CartContext";
 
 function Cart() {
+    const { user } = useUser();
+    const { cart } = useCart();
+    const {totalPrice} = useCart();
+    const {delivery} = useCart();
+    const [product, setProduct] = useState([]);
+
+    useEffect(() => {
+        if (!user) {
+            return;
+        }
+        const fetchProduct = async () => {
+            try {
+                const res = await api.get(`/Cart?userId=${user.id}`);
+                setProduct(res.data);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        fetchProduct();
+    }, [user.id,cart]);
+
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-black text-white px-6 pt-[50px]">
-            <h1 className="text-3xl text-center md:text-4xl font-bold mb-8">
-                Your <span className="text-purple-500">Cart</span>
-            </h1>
+        <>
+            <Navbar />
+            <div className="min-h-screen bg-[#F1FAEE] text-slate-800 px-6 pt-[100px] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-[#457b9d]/10 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/3"></div>
 
-            <div className="grid lg:grid-cols-3 gap-10">
-                <div className="lg:col-span-2 space-y-6">
-                    <div className="flex gap-6 bg-white/5 backdrop-blur-xl border border-white/10 p-4 rounded-2xl">
-                        <img
-                            src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
-                            className="w-28 h-28 rounded-xl object-cover"
-                            loading="lazy"
-                        />
+                <h1 className="text-3xl text-center md:text-5xl font-black mb-12 text-[#1D3557] tracking-tight">
+                    Your <span className="text-[#457b9d]">Cart</span>
+                </h1>
 
-                        <div className="flex-1">
-                            <h2 className="text-lg font-semibold">Apple MacBook Air M4</h2>
-                            <p className="text-gray-400 text-sm">Powerful laptop with M4 chip</p>
+                <div className="max-w-7xl  mx-auto grid lg:grid-cols-3">
+                    {product ? (
+                        product.map((item) => {
+                            return <CartCard key={item.id} item={item.product} size={item.size} />;
+                        })
+                    ) : (
+                        <div className="flex flex-col items-center text-center mt-[100px]">
+                            <h1 className="text-4xl md:text-5xl font-black text-[#1D3557] tracking-tight">No Cart Items</h1>
 
-                            <div className="flex items-center gap-4 mt-3">
-                                <span className="text-purple-400 font-bold">₹90,990</span>
+                            <p className="text-gray-500 text-lg mt-2 max-w-xl">
+                                You haven’t added any products yet. Start adding your devices!
+                            </p>
 
-                                <div className="flex items-center gap-2 bg-white/5 px-3 py-1 rounded-lg">
-                                    <button className="px-2 text-lg">-</button>
-                                    <span className="font-semibold">1</span>
-                                    <button className="px-2 text-lg">+</button>
-                                </div>
-                            </div>
+                            <Link
+                                to="/shop"
+                                className="mt-4 px-8 py-3 bg-[#1D3557] text-white rounded-full font-bold hover:bg-[#457b9d] transition"
+                            >
+                                Browse Products
+                            </Link>
                         </div>
-                        <button className="text-red-400 hover:text-red-500">✕</button>
-                    </div>
-
-                    <div className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent my-4"></div>
+                    )}
                 </div>
+                <div className="bg-white border border-slate-200 p-8 rounded-[2.5rem] h-fit shadow-xl shadow-blue-900/5">
+                    <h2 className="text-2xl font-black text-[#1D3557] mb-6">Order Summary</h2>
 
-                <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-2xl h-fit">
-                    <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
-
-                    <div className="flex justify-between text-gray-400 mb-2">
+                    <div className="flex justify-between text-slate-500 font-medium mb-3">
                         <span>Subtotal</span>
-                        <span>₹90,990</span>
+                        <span className="text-slate-800 font-bold">{totalPrice}</span>
                     </div>
 
-                    <div className="flex justify-between text-gray-400 mb-2">
+                    <div className="flex justify-between text-slate-500 font-medium mb-6">
                         <span>Delivery</span>
-                        <span>₹199</span>
+                        <span className="text-slate-800 font-bold">{
+                        (delivery==0)?"Free":delivery
+                        }</span>
                     </div>
 
-                    <div className="flex justify-between text-lg font-bold mt-4">
+                    <div className="flex justify-between text-xl font-black mt-4 pt-4 border-t border-slate-100 text-[#1D3557]">
                         <span>Total</span>
-                        <span className="text-purple-400">₹91,189</span>
+                        <span className="text-[#457b9d]">{totalPrice+delivery}</span>
                     </div>
 
-                    <button className="w-full mt-6 bg-purple-600 hover:bg-purple-700 py-3 rounded-xl font-semibold">
+                    <Link
+                        to="/checkOut"
+                        className="w-[100px] block m-auto text-center bg-[#457b9d] hover:bg-[#36607a] text-white py-4 rounded-xl font-bold shadow-lg shadow-blue-900/20 hover:-translate-y-1 transition-all duration-300"
+                    >
                         Checkout
-                    </button>
+                    </Link>
                 </div>
             </div>
-        </div>
+            <Footer />
+        </>
     );
 }
 

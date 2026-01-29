@@ -13,7 +13,7 @@ const navigate = useNavigate();
         name: "",
         email: "",
         password: "",
-        role:"user"
+        role:"user",
 
     });
 

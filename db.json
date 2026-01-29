@@ -34,127 +34,204 @@
   "products": [
     {
       "id": "1",
-      "name": "Apple MacBook Air M4",
-      "img": "/src/assets/product/Apple MacBook Air M4.png",
-      "price": 90990,
+      "name": "Acer NITRO LITE ",
+      "img": "/src/assets/product/Acer.png",
+      "price": 57990,
       "rent": 1000,
-      "description": " The Apple MacBook Air M4 is a powerful, ultra-thin laptop designed for students, developers, creators, and everyday users who need speed and portability. Powered by Apple’s latest M4 chip, it delivers lightning-fast performance while maintaining excellent battery efficiency.This laptop features a stunning Liquid Retina display, offering vibrant colors, sharp text, and smooth visuals—perfect for coding, watching movies, and creative work. With its lightweight aluminum design, the MacBook Air M4 is easy to carry anywhere, making it ideal for travel and daily use.The M4 chip brings improved CPU, GPU, and AI performance, making multitasking, video editing, and software development faster and smoother than ever. It also includes a 12MP Center Stage camera, advanced speakers, and support for multiple external displays, making it great for meetings and productivity.With up to 18 hours of battery life, fast charging, and macOS optimization, the MacBook Air M4 is built to last all day on a single charge. ",
-      "smallDes": " The Apple MacBook Air M4 is a powerful...",
-      "category": "laptop"
+      "description": " This Acer Nitro Lite 16 gaming laptop is designed to deliver a robust performance for gaming enthusiasts and casual gamers alike. Featuring a 40.60 cm (16) WUXGA IPS display, it offers vibrant colours and the 165 Hz refresh rate delivers fluid motion. Powered by an Intel Core i5-13420H processor and NVIDIA GeForce RTX 3050 GPU, this laptop allows you to have smooth and intense gaming sessions. With a versatile connectivity option, it facilitates easy connection to peripherals and networks.",
+      "smallDes": " The Acer Nitro is a powerful...",
+      "category": "acer"
     },
     {
       "id": "2",
-      "name": "Apple iPhone 16",
-      "img": "/src/assets/product/Iphone.png",
-      "price": 64900,
+      "name": "DELL Alienware ",
+      "img": "/src/assets/product/Dell.png",
+      "price": 249990,
       "rent": 800,
-      "description": "The Apple iPhone 16 is Apple’s latest next-generation smartphone designed for powerful performance, stunning photography, and intelligent features. It comes with a beautiful 6.1-inch Super Retina XDR OLED display that delivers vibrant colors, deep blacks, and high brightness, making it perfect for watching videos, gaming, and everyday use.Powered by the new Apple A18 chip, the iPhone 16 offers faster performance, smoother multitasking, and improved battery efficiency. Whether you are playing games, editing videos, or using AI-powered apps, it delivers a smooth and lag-free experience.The iPhone 16 features an advanced 48MP dual-camera system with ultra-wide lens support, allowing you to capture stunning photos and videos in any lighting condition. With improved night mode, macro photography, and smart HDR, your pictures look professional. The 12MP front camera ensures high-quality selfies and clear video calls.Apple also introduced a new Camera Control button and Action button, giving quick access",
-      "smallDes": " The Apple iPhone 16  is a good...",
-      "category": "phone"
+      "description": "Get a laptop that can handle several tasks well and knows your demands. The Dell Alienware laptop offers amazing performance across all of your favourite games and programmes thanks to its integrated 14-core 12th Gen Intel Core CPU. Additionally, NVIDIA GeForce RTX graphics, which feature NVIDIA Ray Tracing, NVIDIA Max-Q, and NVIDIA Dynamic Learning Super Sampling (DLSS) technology, let you push performance to its maximum limit. Enjoy lightning-fast gaming with ease thanks to the high-speed capabilities of Killer Wi-Fi 6 and USB 3.2 Gen 2 Type-C, which delivers data at up to 40 Gbps. Moreover, Dolby Vision takes advantage of information that studios and developers provide to deliver greater colour palettes and breathtaking visual effects. The scalable sound system provided by Dolby Atmos, on the other hand, provides each voice and instrument with its own space, allowing you to experience a game exactly as its creators intended.",
+      "smallDes": " The DELL Alienware  is a good...",
+      "category": "dell"
     },
     {
       "id": "3",
-      "name": "TRIGGR Ultrabuds N5",
-      "img": "/src/assets/product/earbud.png",
-      "price": 599,
+      "name": "Lenovo LOQ",
+      "img": "/src/assets/product/Lenovo.png",
+      "price": 68980,
       "rent": null,
-      "description": "The TRIGGR Ultrabuds N5 are advanced true wireless earbuds designed for immersive sound, long battery life, and seamless connectivity. Powered by the latest Bluetooth v6.0, these earbuds offer faster pairing, stable connection, and low power consumption for uninterrupted listening.Equipped with 13mm dynamic drivers, the Ultrabuds N5 delivers deep bass, clear mids, and crisp highs, making it perfect for music, movies, and gaming. With up to 40 hours of total playtime using the charging case, you can enjoy long listening sessions without frequent charging.",
-      "smallDes": " The TRIGGR Ultrabuds N5 is a good ",
-      "category": "earbud"
+      "description": "This Lenovo LOQ Essential laptop comes with a low-power design, featuring 12th Gen Intel Core processors and 3050A NVIDIA GeForce RTX graphics. Crafted for students and first-time gamers, this laptop is powered by AI-based DLSS 3. Furthermore, you can enjoy a 16:9 FHD display, 144 Hz refresh rate, and 300 nits of brightness. Besides, this laptop offers an ergonomically designed keypad for maximum typing comfort, an efficient cooling system, a 57 Whr fast-charging battery, and a Lenovo Vantage.",
+      "smallDes": "Lenovo LOQ is a Best....",
+      "category": "lenovo"
     },
     {
       "id": "4",
-      "name": "TRIGGR Trinity 2 with Dual Pairing",
-      "img": "/src/assets/product/headset.png",
-      "price": 799,
+      "name": "ASUS TUF Gaming A15",
+      "img": "/src/assets/product/Asus.png",
+      "price": 72990,
       "rent": null,
-      "description": "The TRIGGR Trinity 2 with Dual Pairing are advanced true wireless earbuds designed for immersive sound, long battery life, and seamless connectivity. Powered by the latest Bluetooth v6.0, these earbuds offer faster pairing, stable connection, and low power consumption for uninterrupted listening.Equipped with 13mm dynamic drivers, the Ultrabuds N5 delivers deep bass, clear mids, and crisp highs, making it perfect for music, movies, and gaming. With up to 40 hours of total playtime using the charging case, you can enjoy long listening sessions without frequent charging.",
-      "smallDes": " The TRIGGR Trinity 2 with Dual Pairing is a powerful ",
-      "category": "headset"
+      "description": "This ASUS TUF Gaming A15 delivers a smooth experience for gaming, streaming, and multitasking with an AMD Ryzen 7000 Series CPU and high frame rate graphics, despite memory limited to 4800MHz. It offers clear audio via dual speakers with customisable modes and an integrated equaliser. The laptop features comprehensive Self-cleaning Cooling 2.0 for reliability, a desktop-style RGB keyboard with highlighted WASD keys and a 20-million-press lifespan, and military-grade MIL-STD-810H durability. Upgrades are easy with a user-friendly pop-open screw for RAM and SSD expansion.",
+      "smallDes": " The ASUS TUF Gaming A15 is a powerful...",
+      "category": "asus"
     },
     {
       "id": "5",
-      "name": "Apple MacBook Air M4",
-      "img": "/src/assets/product/Apple MacBook Air M4.png",
-      "price": 90990,
+      "name": "Acer NITRO LITE ",
+      "img": "/src/assets/product/Acer.png",
+      "price": 57990,
       "rent": 1000,
-      "description": " The Apple MacBook Air M4 is a powerful, ultra-thin laptop designed for students, developers, creators, and everyday users who need speed and portability. Powered by Apple’s latest M4 chip, it delivers lightning-fast performance while maintaining excellent battery efficiency.This laptop features a stunning Liquid Retina display, offering vibrant colors, sharp text, and smooth visuals—perfect for coding, watching movies, and creative work. With its lightweight aluminum design, the MacBook Air M4 is easy to carry anywhere, making it ideal for travel and daily use.The M4 chip brings improved CPU, GPU, and AI performance, making multitasking, video editing, and software development faster and smoother than ever. It also includes a 12MP Center Stage camera, advanced speakers, and support for multiple external displays, making it great for meetings and productivity.With up to 18 hours of battery life, fast charging, and macOS optimization, the MacBook Air M4 is built to last all day on a single charge. ",
-      "smallDes": " The Apple MacBook Air M4 is a powerful...",
-      "category": "laptop"
+      "description": " This Acer Nitro Lite 16 gaming laptop is designed to deliver a robust performance for gaming enthusiasts and casual gamers alike. Featuring a 40.60 cm (16) WUXGA IPS display, it offers vibrant colours and the 165 Hz refresh rate delivers fluid motion. Powered by an Intel Core i5-13420H processor and NVIDIA GeForce RTX 3050 GPU, this laptop allows you to have smooth and intense gaming sessions. With a versatile connectivity option, it facilitates easy connection to peripherals and networks.",
+      "smallDes": " The Acer Nitro is a powerful...",
+      "category": "acer"
     },
     {
       "id": "6",
-      "name": "Apple iPhone 16",
-      "img": "/src/assets/product/Iphone.png",
-      "price": 64900,
+      "name": "DELL Alienware ",
+      "img": "/src/assets/product/Dell.png",
+      "price": 249990,
       "rent": 800,
-      "description": "The Apple iPhone 16 is Apple’s latest next-generation smartphone designed for powerful performance, stunning photography, and intelligent features. It comes with a beautiful 6.1-inch Super Retina XDR OLED display that delivers vibrant colors, deep blacks, and high brightness, making it perfect for watching videos, gaming, and everyday use.Powered by the new Apple A18 chip, the iPhone 16 offers faster performance, smoother multitasking, and improved battery efficiency. Whether you are playing games, editing videos, or using AI-powered apps, it delivers a smooth and lag-free experience.The iPhone 16 features an advanced 48MP dual-camera system with ultra-wide lens support, allowing you to capture stunning photos and videos in any lighting condition. With improved night mode, macro photography, and smart HDR, your pictures look professional. The 12MP front camera ensures high-quality selfies and clear video calls.Apple also introduced a new Camera Control button and Action button, giving quick access",
-      "smallDes": " The Apple iPhone 16  is a good...",
-      "category": "phone"
+      "description": "Get a laptop that can handle several tasks well and knows your demands. The Dell Alienware laptop offers amazing performance across all of your favourite games and programmes thanks to its integrated 14-core 12th Gen Intel Core CPU. Additionally, NVIDIA GeForce RTX graphics, which feature NVIDIA Ray Tracing, NVIDIA Max-Q, and NVIDIA Dynamic Learning Super Sampling (DLSS) technology, let you push performance to its maximum limit. Enjoy lightning-fast gaming with ease thanks to the high-speed capabilities of Killer Wi-Fi 6 and USB 3.2 Gen 2 Type-C, which delivers data at up to 40 Gbps. Moreover, Dolby Vision takes advantage of information that studios and developers provide to deliver greater colour palettes and breathtaking visual effects. The scalable sound system provided by Dolby Atmos, on the other hand, provides each voice and instrument with its own space, allowing you to experience a game exactly as its creators intended.",
+      "smallDes": " The DELL Alienware  is a good...",
+      "category": "dell"
     },
     {
       "id": "7",
-      "name": "TRIGGR Ultrabuds N5",
-      "img": "/src/assets/product/earbud.png",
-      "price": 599,
+      "name": "Lenovo LOQ",
+      "img": "/src/assets/product/Lenovo.png",
+      "price": 68980,
       "rent": null,
-      "description": "The TRIGGR Ultrabuds N5 are advanced true wireless earbuds designed for immersive sound, long battery life, and seamless connectivity. Powered by the latest Bluetooth v6.0, these earbuds offer faster pairing, stable connection, and low power consumption for uninterrupted listening.Equipped with 13mm dynamic drivers, the Ultrabuds N5 delivers deep bass, clear mids, and crisp highs, making it perfect for music, movies, and gaming. With up to 40 hours of total playtime using the charging case, you can enjoy long listening sessions without frequent charging.",
-      "smallDes": " The TRIGGR Ultrabuds N5 is a good ",
-      "category": "earbud"
+      "description": "This Lenovo LOQ Essential laptop comes with a low-power design, featuring 12th Gen Intel Core processors and 3050A NVIDIA GeForce RTX graphics. Crafted for students and first-time gamers, this laptop is powered by AI-based DLSS 3. Furthermore, you can enjoy a 16:9 FHD display, 144 Hz refresh rate, and 300 nits of brightness. Besides, this laptop offers an ergonomically designed keypad for maximum typing comfort, an efficient cooling system, a 57 Whr fast-charging battery, and a Lenovo Vantage.",
+      "smallDes": "Lenovo LOQ is a Best....",
+      "category": "lenovo"
     },
     {
       "id": "8",
-      "name": "TRIGGR Trinity 2 with Dual Pairing",
-      "img": "/src/assets/product/headset.png",
-      "price": 799,
+      "name": "ASUS TUF Gaming A15",
+      "img": "/src/assets/product/Asus.png",
+      "price": 72990,
       "rent": null,
-      "description": "The TRIGGR Trinity 2 with Dual Pairing are advanced true wireless earbuds designed for immersive sound, long battery life, and seamless connectivity. Powered by the latest Bluetooth v6.0, these earbuds offer faster pairing, stable connection, and low power consumption for uninterrupted listening.Equipped with 13mm dynamic drivers, the Ultrabuds N5 delivers deep bass, clear mids, and crisp highs, making it perfect for music, movies, and gaming. With up to 40 hours of total playtime using the charging case, you can enjoy long listening sessions without frequent charging.",
-      "smallDes": " The TRIGGR Trinity 2 with Dual Pairing is a powerful ",
-      "category": "headset"
+      "description": "This ASUS TUF Gaming A15 delivers a smooth experience for gaming, streaming, and multitasking with an AMD Ryzen 7000 Series CPU and high frame rate graphics, despite memory limited to 4800MHz. It offers clear audio via dual speakers with customisable modes and an integrated equaliser. The laptop features comprehensive Self-cleaning Cooling 2.0 for reliability, a desktop-style RGB keyboard with highlighted WASD keys and a 20-million-press lifespan, and military-grade MIL-STD-810H durability. Upgrades are easy with a user-friendly pop-open screw for RAM and SSD expansion.",
+      "smallDes": " The ASUS TUF Gaming A15 is a powerful...",
+      "category": "asus"
     },
     {
       "id": "9",
-      "name": "Apple MacBook Air M4",
-      "img": "/src/assets/product/Apple MacBook Air M4.png",
-      "price": 90990,
+      "name": "Acer NITRO LITE ",
+      "img": "/src/assets/product/Acer.png",
+      "price": 57990,
       "rent": 1000,
-      "description": " The Apple MacBook Air M4 is a powerful, ultra-thin laptop designed for students, developers, creators, and everyday users who need speed and portability. Powered by Apple’s latest M4 chip, it delivers lightning-fast performance while maintaining excellent battery efficiency.This laptop features a stunning Liquid Retina display, offering vibrant colors, sharp text, and smooth visuals—perfect for coding, watching movies, and creative work. With its lightweight aluminum design, the MacBook Air M4 is easy to carry anywhere, making it ideal for travel and daily use.The M4 chip brings improved CPU, GPU, and AI performance, making multitasking, video editing, and software development faster and smoother than ever. It also includes a 12MP Center Stage camera, advanced speakers, and support for multiple external displays, making it great for meetings and productivity.With up to 18 hours of battery life, fast charging, and macOS optimization, the MacBook Air M4 is built to last all day on a single charge. ",
-      "smallDes": " The Apple MacBook Air M4 is a powerful ",
-      "category": "laptop"
+      "description": " This Acer Nitro Lite 16 gaming laptop is designed to deliver a robust performance for gaming enthusiasts and casual gamers alike. Featuring a 40.60 cm (16) WUXGA IPS display, it offers vibrant colours and the 165 Hz refresh rate delivers fluid motion. Powered by an Intel Core i5-13420H processor and NVIDIA GeForce RTX 3050 GPU, this laptop allows you to have smooth and intense gaming sessions. With a versatile connectivity option, it facilitates easy connection to peripherals and networks.",
+      "smallDes": " The Acer Nitro is a powerful...",
+      "category": "acer"
     },
     {
       "id": "10",
-      "name": "Apple MacBook Air M4",
-      "img": "/src/assets/product/Apple MacBook Air M4.png",
-      "price": 90990,
-      "rent": 1000,
-      "description": " The Apple MacBook Air M4 is a powerful, ultra-thin laptop designed for students, developers, creators, and everyday users who need speed and portability. Powered by Apple’s latest M4 chip, it delivers lightning-fast performance while maintaining excellent battery efficiency.This laptop features a stunning Liquid Retina display, offering vibrant colors, sharp text, and smooth visuals—perfect for coding, watching movies, and creative work. With its lightweight aluminum design, the MacBook Air M4 is easy to carry anywhere, making it ideal for travel and daily use.The M4 chip brings improved CPU, GPU, and AI performance, making multitasking, video editing, and software development faster and smoother than ever. It also includes a 12MP Center Stage camera, advanced speakers, and support for multiple external displays, making it great for meetings and productivity.With up to 18 hours of battery life, fast charging, and macOS optimization, the MacBook Air M4 is built to last all day on a single charge. ",
-      "smallDes": " The Apple MacBook Air M4 is a powerful ",
-      "category": "laptop"
+      "name": "DELL Alienware ",
+      "img": "/src/assets/product/Dell.png",
+      "price": 249990,
+      "rent": 800,
+      "description": "Get a laptop that can handle several tasks well and knows your demands. The Dell Alienware laptop offers amazing performance across all of your favourite games and programmes thanks to its integrated 14-core 12th Gen Intel Core CPU. Additionally, NVIDIA GeForce RTX graphics, which feature NVIDIA Ray Tracing, NVIDIA Max-Q, and NVIDIA Dynamic Learning Super Sampling (DLSS) technology, let you push performance to its maximum limit. Enjoy lightning-fast gaming with ease thanks to the high-speed capabilities of Killer Wi-Fi 6 and USB 3.2 Gen 2 Type-C, which delivers data at up to 40 Gbps. Moreover, Dolby Vision takes advantage of information that studios and developers provide to deliver greater colour palettes and breathtaking visual effects. The scalable sound system provided by Dolby Atmos, on the other hand, provides each voice and instrument with its own space, allowing you to experience a game exactly as its creators intended.",
+      "smallDes": " The DELL Alienware  is a good...",
+      "category": "dell"
     },
     {
       "id": "11",
-      "name": "Apple MacBook Air M4",
-      "img": "/src/assets/product/Apple MacBook Air M4.png",
-      "price": 90990,
-      "rent": 1000,
-      "description": " The Apple MacBook Air M4 is a powerful, ultra-thin laptop designed for students, developers, creators, and everyday users who need speed and portability. Powered by Apple’s latest M4 chip, it delivers lightning-fast performance while maintaining excellent battery efficiency.This laptop features a stunning Liquid Retina display, offering vibrant colors, sharp text, and smooth visuals—perfect for coding, watching movies, and creative work. With its lightweight aluminum design, the MacBook Air M4 is easy to carry anywhere, making it ideal for travel and daily use.The M4 chip brings improved CPU, GPU, and AI performance, making multitasking, video editing, and software development faster and smoother than ever. It also includes a 12MP Center Stage camera, advanced speakers, and support for multiple external displays, making it great for meetings and productivity.With up to 18 hours of battery life, fast charging, and macOS optimization, the MacBook Air M4 is built to last all day on a single charge. ",
-      "smallDes": " The Apple MacBook Air M4 is a powerful ",
-      "category": "laptop"
+      "name": "Lenovo LOQ",
+      "img": "/src/assets/product/Lenovo.png",
+      "price": 68980,
+      "rent": null,
+      "description": "This Lenovo LOQ Essential laptop comes with a low-power design, featuring 12th Gen Intel Core processors and 3050A NVIDIA GeForce RTX graphics. Crafted for students and first-time gamers, this laptop is powered by AI-based DLSS 3. Furthermore, you can enjoy a 16:9 FHD display, 144 Hz refresh rate, and 300 nits of brightness. Besides, this laptop offers an ergonomically designed keypad for maximum typing comfort, an efficient cooling system, a 57 Whr fast-charging battery, and a Lenovo Vantage.",
+      "smallDes": "Lenovo LOQ is a Best....",
+      "category": "lenovo"
     },
     {
       "id": "12",
-      "name": "Apple MacBook Air M4",
-      "img": "/src/assets/product/Apple MacBook Air M4.png",
-      "price": 90990,
-      "rent": 1000,
-      "description": " The Apple MacBook Air M4 is a powerful, ultra-thin laptop designed for students, developers, creators, and everyday users who need speed and portability. Powered by Apple’s latest M4 chip, it delivers lightning-fast performance while maintaining excellent battery efficiency.This laptop features a stunning Liquid Retina display, offering vibrant colors, sharp text, and smooth visuals—perfect for coding, watching movies, and creative work. With its lightweight aluminum design, the MacBook Air M4 is easy to carry anywhere, making it ideal for travel and daily use.The M4 chip brings improved CPU, GPU, and AI performance, making multitasking, video editing, and software development faster and smoother than ever. It also includes a 12MP Center Stage camera, advanced speakers, and support for multiple external displays, making it great for meetings and productivity.With up to 18 hours of battery life, fast charging, and macOS optimization, the MacBook Air M4 is built to last all day on a single charge. ",
-      "smallDes": " The Apple MacBook Air M4 is a powerful ",
-      "category": "laptop"
+      "name": "ASUS TUF Gaming A15",
+      "img": "/src/assets/product/Asus.png",
+      "price": 72990,
+      "rent": null,
+      "description": "This ASUS TUF Gaming A15 delivers a smooth experience for gaming, streaming, and multitasking with an AMD Ryzen 7000 Series CPU and high frame rate graphics, despite memory limited to 4800MHz. It offers clear audio via dual speakers with customisable modes and an integrated equaliser. The laptop features comprehensive Self-cleaning Cooling 2.0 for reliability, a desktop-style RGB keyboard with highlighted WASD keys and a 20-million-press lifespan, and military-grade MIL-STD-810H durability. Upgrades are easy with a user-friendly pop-open screw for RAM and SSD expansion.",
+      "smallDes": " The ASUS TUF Gaming A15 is a powerful...",
+      "category": "asus"
     }
   ],
-  "Bookings":[
-
+  "Cart": [
+    {
+      "id": "d974",
+      "userId": "9eb7",
+      "product": {
+        "id": "5",
+        "name": "Acer NITRO LITE ",
+        "img": "/src/assets/product/Acer.png",
+        "price": 57990,
+        "rent": 1000,
+        "description": " This Acer Nitro Lite 16 gaming laptop is designed to deliver a robust performance for gaming enthusiasts and casual gamers alike. Featuring a 40.60 cm (16) WUXGA IPS display, it offers vibrant colours and the 165 Hz refresh rate delivers fluid motion. Powered by an Intel Core i5-13420H processor and NVIDIA GeForce RTX 3050 GPU, this laptop allows you to have smooth and intense gaming sessions. With a versatile connectivity option, it facilitates easy connection to peripherals and networks.",
+        "smallDes": " The Acer Nitro is a powerful...",
+        "category": "acer"
+      },
+      "size": 1
+    },
+    {
+      "id": "2b6e",
+      "userId": "9eb7",
+      "product": {
+        "id": "2",
+        "name": "DELL Alienware ",
+        "img": "/src/assets/product/Dell.png",
+        "price": 249990,
+        "rent": 800,
+        "description": "Get a laptop that can handle several tasks well and knows your demands. The Dell Alienware laptop offers amazing performance across all of your favourite games and programmes thanks to its integrated 14-core 12th Gen Intel Core CPU. Additionally, NVIDIA GeForce RTX graphics, which feature NVIDIA Ray Tracing, NVIDIA Max-Q, and NVIDIA Dynamic Learning Super Sampling (DLSS) technology, let you push performance to its maximum limit. Enjoy lightning-fast gaming with ease thanks to the high-speed capabilities of Killer Wi-Fi 6 and USB 3.2 Gen 2 Type-C, which delivers data at up to 40 Gbps. Moreover, Dolby Vision takes advantage of information that studios and developers provide to deliver greater colour palettes and breathtaking visual effects. The scalable sound system provided by Dolby Atmos, on the other hand, provides each voice and instrument with its own space, allowing you to experience a game exactly as its creators intended.",
+        "smallDes": " The DELL Alienware  is a good...",
+        "category": "dell"
+      },
+      "size": 6
+    }
+  ],
+  "Bookings": [],
+  "wishlist": [
+    {
+      "id": "7c23",
+      "userId": "9eb7",
+      "productId": "1",
+      "product": {
+        "id": "1",
+        "name": "Acer NITRO LITE ",
+        "img": "/src/assets/product/Acer.png",
+        "price": 57990,
+        "rent": 1000,
+        "description": " This Acer Nitro Lite 16 gaming laptop is designed to deliver a robust performance for gaming enthusiasts and casual gamers alike. Featuring a 40.60 cm (16) WUXGA IPS display, it offers vibrant colours and the 165 Hz refresh rate delivers fluid motion. Powered by an Intel Core i5-13420H processor and NVIDIA GeForce RTX 3050 GPU, this laptop allows you to have smooth and intense gaming sessions. With a versatile connectivity option, it facilitates easy connection to peripherals and networks.",
+        "smallDes": " The Acer Nitro is a powerful...",
+        "category": "acer"
+      }
+    },
+    {
+      "id": "539c",
+      "userId": "9eb7",
+      "productId": "2",
+      "product": {
+        "id": "2",
+        "name": "DELL Alienware ",
+        "img": "/src/assets/product/Dell.png",
+        "price": 249990,
+        "rent": 800,
+        "description": "Get a laptop that can handle several tasks well and knows your demands. The Dell Alienware laptop offers amazing performance across all of your favourite games and programmes thanks to its integrated 14-core 12th Gen Intel Core CPU. Additionally, NVIDIA GeForce RTX graphics, which feature NVIDIA Ray Tracing, NVIDIA Max-Q, and NVIDIA Dynamic Learning Super Sampling (DLSS) technology, let you push performance to its maximum limit. Enjoy lightning-fast gaming with ease thanks to the high-speed capabilities of Killer Wi-Fi 6 and USB 3.2 Gen 2 Type-C, which delivers data at up to 40 Gbps. Moreover, Dolby Vision takes advantage of information that studios and developers provide to deliver greater colour palettes and breathtaking visual effects. The scalable sound system provided by Dolby Atmos, on the other hand, provides each voice and instrument with its own space, allowing you to experience a game exactly as its creators intended.",
+        "smallDes": " The DELL Alienware  is a good...",
+        "category": "dell"
+      }
+    },
+    {
+      "id": "5aad",
+      "userId": "9eb7",
+      "productId": "7",
+      "product": {
+        "id": "7",
+        "name": "Lenovo LOQ",
+        "img": "/src/assets/product/Lenovo.png",
+        "price": 68980,
+        "rent": null,
+        "description": "This Lenovo LOQ Essential laptop comes with a low-power design, featuring 12th Gen Intel Core processors and 3050A NVIDIA GeForce RTX graphics. Crafted for students and first-time gamers, this laptop is powered by AI-based DLSS 3. Furthermore, you can enjoy a 16:9 FHD display, 144 Hz refresh rate, and 300 nits of brightness. Besides, this laptop offers an ergonomically designed keypad for maximum typing comfort, an efficient cooling system, a 57 Whr fast-charging battery, and a Lenovo Vantage.",
+        "smallDes": "Lenovo LOQ is a Best....",
+        "category": "lenovo"
+      }
+    }
   ],
   "Feedback": [
     {
@@ -177,6 +254,12 @@
       "name": "Anshif P",
       "email": "anshifniju369@gmail.com",
       "message": "adsf"
+    },
+    {
+      "id": "c262",
+      "name": "Anshif",
+      "email": "anshifp369@gmail.com",
+      "message": "good and great"
     }
   ]
 }

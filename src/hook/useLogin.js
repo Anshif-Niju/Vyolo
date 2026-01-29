@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { getUserByEmail } from "../service/authService";
+import { useUser } from "../context/UserContext";
 
 export const useLogin = () => {
     const navigate = useNavigate();
 
+    const {user} = useUser()
     const [formData, setFormData] = useState({
         email: "",
         pass: "",
@@ -13,7 +15,6 @@ export const useLogin = () => {
     const [error, setError] = useState("");
 
     useEffect(() => {
-        const user = JSON.parse(sessionStorage.getItem("user"));
         if (user) {
             navigate("/home");
         }

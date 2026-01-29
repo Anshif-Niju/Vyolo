@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 
 function Shop() {
     const [product, setProduct] = useState([]);
+    const [search, setSearch] = useState("");
     const [selectCategory, setSelectCategory] = useState("all");
 
     useEffect(() => {
@@ -21,42 +22,60 @@ function Shop() {
         fetchProduct();
     }, [selectCategory]);
 
+
+const filterProduct=product.filter((item)=>{
+return (item.name.toLowerCase().includes(search.toLowerCase()))
+})
+
     return (
         <>
             <Navbar />
-            <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-black text-white px-6 pt-[100px]">
-                <h1 className="text-3xl font-bold text-center mb-8 ">
-                    Shop <span className="text-purple-500">Devices</span>
-                </h1>
-
-                <div className="flex flex-wrap gap-3 mb-8 justify-center">
-                    {["All", "Laptop", "Phone", "Headset", "Earbud"].map((item, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setSelectCategory(item.toLowerCase())}
-                            className="px-5 py-2 rounded-full border transition bg-purple-600 text-white bg-white/5 text-white hover:bg-purple-600"
-                        >
-                            {item}
-                        </button>
-                    ))}
+            <div className="min-h-screen bg-[#F1FAEE] px-6 pt-32 pb-24">
+                <div className="text-center mb-12">
+                    <span className="text-[#457b9d] font-bold tracking-widest uppercase text-xs mb-3 block">
+                        Premium Gear
+                    </span>
+                    <h1 className="text-4xl md:text-5xl font-black text-[#1D3557] tracking-tight">
+                        Shop <span className="text-[#457b9d]">Devices</span>
+                    </h1>
+                    <div className="w-24 h-1.5 bg-[#1D3557]/10 mx-auto mt-6 rounded-full"></div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {
-                    product.map((product) => {
-                        return (
-                            <ProductCard
-                                key={product.id}
-                                id={product.id}
-                                smallDes={product.smallDes}
-                                category={product.category}
-                                rent={product.rent}
-                                description={product.description}
-                                title={product.name}
-                                price={product.price}
-                                img={product.img}
-                            />
-                        );
+                <div className="max-w-7xl mx-auto flex items-center justify-between my-6 gap-6">
+                    <input
+                        type="text"
+                        placeholder="Search products..."
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        className="w-64 px-4 py-2 border rounded-lg shadow"
+                    />
+
+                    <div className="flex flex-wrap gap-3">
+                        {["All", "Acer", "Dell", "Lenovo", "Asus"].map((item, index) => {
+                            const isSelected = selectCategory === item.toLowerCase();
+                            return (
+                                <button
+                                    key={index}
+                                    onClick={() => setSelectCategory(item.toLowerCase())}
+                                    className={`
+            px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 border
+            ${
+                isSelected
+                    ? "bg-[#1D3557] text-white border-[#1D3557] shadow-lg shadow-blue-900/20 scale-105"
+                    : "bg-white text-slate-500 border-slate-200 hover:border-[#457b9d] hover:text-[#457b9d] hover:-translate-y-0.5"
+            }
+          `}
+                                >
+                                    {item}
+                                </button>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    {filterProduct.map((product) => {
+                        return <ProductCard key={product.id} product={product} />;
                     })}
                 </div>
             </div>

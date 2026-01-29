@@ -1,27 +1,35 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import WishlistButton from "./WishlistButton";
+import AddCart from "./AddCart";
 
-function ProductCard({ id,title, price, img ,smallDes,category,rent,description}) {
+function ProductCard({ product }) {
     const [qty, setQty] = useState(0);
     const [message, setMessage] = useState("");
 
     return (
+        <div className="group bg-white border border-slate-100 rounded-[1.5rem] p-5 shadow-sm hover:shadow-[0_8px_30px_rgb(69,123,157,0.15)] hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
+            <Link to={`/itemDetail/${product.id}`} key={product.id} className="block relative overflow-hidden rounded-2xl flex-1">
+                <div className="w-full h-48 bg-slate-50 overflow-hidden rounded-2xl">
+                    <img
+                        loading="lazy"
+                        src={product.img}
+                        alt={product.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                </div>
 
-        <div className="bg-white/5 border border-white/10 rounded-xl p-4 shadow hover:scale-105 transition">
-            {/* Image */}
-          <Link to={`/itemDetail/${id}`}
-          key={id}
-          >
-            <img loading="lazy" src={img} alt={title} className="w-full h-40 object-cover rounded-lg" />
-
-            <h2 className="text-lg font-semibold mt-3">{title}</h2>
-            <p className="text-gray-400 text-sm mb-4">{smallDes}</p>
-            <p className="text-purple-400 font-bold text-xl mt-1">₹{price}</p>
+                <div className="mt-4 space-y-1">
+                    <h2 className="text-lg font-black text-[#1D3557] leading-tight group-hover:text-[#457b9d] transition-colors">
+                        {product.name}
+                    </h2>
+                    <p className="text-slate-500 text-sm font-medium line-clamp-2">{product.smallDes}</p>
+                    <p className="text-[#457b9d] font-black text-2xl pt-2">₹{product.price}</p>
+                </div>
             </Link>
+                {message && <p className="text-xs font-bold text-red-500 bg-red-50 px-2 rounded ml-auto">{message}</p>}
 
-            {/* Quantity */}
-            <div className="flex items-center gap-3 mt-3">
-                {/* Minus */}
+            <div className="flex flex-wrap items-center gap-3 mt-4 p-2 bg-slate-50 rounded-xl w-full">
                 <button
                     onClick={() => {
                         if (qty === 0) {
@@ -31,37 +39,37 @@ function ProductCard({ id,title, price, img ,smallDes,category,rent,description}
                         setMessage("");
                         setQty((prev) => prev - 1);
                     }}
-                    className="px-2 py-1 bg-white/10 rounded hover:bg-purple-600"
+                    className="w-8 h-8 flex items-center justify-center rounded-full bg-white border border-slate-200 text-[#1D3557] hover:bg-[#1D3557] hover:text-white transition-colors shadow-sm font-bold"
                 >
                     -
                 </button>
 
-                <span className="text-lg font-bold">{qty}</span>
+                <span className="text-lg font-bold text-[#1D3557] min-w-[20px] text-center">{qty}</span>
 
-                {/* Plus */}
                 <button
                     onClick={() => {
                         if (qty === 10) {
-                            setMessage("Max product limit is 10");
+                            setMessage("Max limit: 10");
                             return;
                         }
                         setMessage("");
                         setQty((prev) => prev + 1);
                     }}
-                    className="px-2 py-1 bg-white/10 rounded hover:bg-purple-600"
+                    className="w-8 h-8 flex items-center justify-center rounded-full bg-white border border-slate-200 text-[#1D3557] hover:bg-[#457b9d] hover:text-white transition-colors shadow-sm font-bold"
                 >
                     +
                 </button>
 
-                {message && <p className="text-red-500 text-sm mt-2">{message}</p>}
+                            <WishlistButton product={product} />
+                
+
             </div>
 
-            {/* Error Message */}
-
-            {/* Buttons */}
-            <div className="flex gap-2 mt-4">
-                <button className="flex-1 bg-purple-600 py-1.5 rounded hover:bg-purple-700 text-sm">Add to Cart</button>
-                <button className="px-3 py-1.5 border border-white/20 rounded hover:bg-white/10 text-sm">Buy</button>
+            <div className="flex gap-3 mt-5 w-full">
+                <AddCart product={product} qty={qty}/>
+                <button className="px-5 py-2.5 border-2 border-[#1D3557] text-[#1D3557] rounded-xl font-bold hover:bg-[#1D3557] hover:text-white transition-all duration-300 text-sm">
+                    Buy
+                </button>
             </div>
         </div>
     );
