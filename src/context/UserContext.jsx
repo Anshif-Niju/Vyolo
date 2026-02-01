@@ -1,37 +1,33 @@
-import {createContext,useContext,useState} from "react"
+import { createContext, useContext, useState, useEffect } from 'react';
 
+const UserContext = createContext();
 
-const UserContext=createContext()
+export const UserProvider = ({ children }) => {
+  const [user, setUser] = useState(() => {
+    const savedUser = sessionStorage.getItem('user');
+    return savedUser ? JSON.parse(savedUser) : null;
+  });
 
-export const UserProvider=({children})=>{
+  const login = (userDetails) => {
+    setUser(userDetails);
+  };
 
-const [user,setUser]=useState(()=>{
-    const savedUser=sessionStorage.getItem("user")
-    return savedUser?JSON.parse(savedUser):null
-})
+  const logout = () => {
+    setUser(null);
+    sessionStorage.removeItem('user');
+  };
 
-const login=(userDetails)=>{
-setUser(userDetails);
-sessionStorage.setItem("user",JSON.stringify(userData))
+  useEffect(() => {
+    if (user) {
+      sessionStorage.setItem('user', JSON.stringify(user));
+    }
+  }, [user]);
 
-}
-
-
-
-const logout=()=>{
-setUser(null);
-sessionStorage.removeItem("user")
-
-}
- 
- return(
-    <UserContext.Provider value={{user,login,logout}}>
-    {children}
+  return (
+    <UserContext.Provider value={{ user, login, logout }}>
+      {children}
     </UserContext.Provider>
- )
- 
-}
+  );
+};
 
-export const useUser=()=>useContext(UserContext)
-
-
+export const useUser = () => useContext(UserContext);

@@ -7,7 +7,7 @@ function NotFound() {
             <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#1D3557]/10 rounded-full blur-3xl"></div>
 
             <h1 className="text-3xl font-black mb-10 text-[#1D3557] tracking-wide">
-                VYOLO<span className="text-[#457b9d]">.</span>
+                Vectr<span className="text-[#457b9d]">.</span>
             </h1>
 
             <div className="relative mb-6">
