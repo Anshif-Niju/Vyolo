@@ -13,8 +13,7 @@ import MyOrders from './pages/MyOrders';
 import Dashboard from './pages/admin/SideBar';
 import UserList from './pages/admin/UserList';
 import ScrollTop from './components/ScrollTop';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Toaster } from 'react-hot-toast';
 
 const ProtectedRoutes = () => {
   const user = JSON.parse(sessionStorage.getItem('user'));
@@ -28,9 +27,9 @@ const PublicRoutes = () => {
   const user = JSON.parse(sessionStorage.getItem('user'));
   if (user) {
     if (user.role == 'admin') {
-     return <Navigate to="/admin/dashboard" />;
+      <Navigate to="/admin/dashboard" />;
     }
-   return <Navigate to="/home" />;
+    <Navigate to="/home" />;
   }
   return <Outlet />;
 };
@@ -38,7 +37,7 @@ const PublicRoutes = () => {
 const PrivateRoutes = () => {
   const user = JSON.parse(sessionStorage.getItem('user'));
   if (!user) {
-   return <Navigate to="/login" />;
+    <Navigate to="/login" />;
   }
   if (user.role === 'admin') return <Navigate to="/admin/dashboard" />;
   return <Outlet />;
@@ -48,23 +47,12 @@ function App() {
   return (
     <>
       <ScrollTop />
-      <ToastContainer
-        position="top-center"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={true}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-        limit={1}
-      />
+      <Toaster position="top-center" reverseOrder={false}></Toaster>
+
       <Routes>
         <Route element={<ProtectedRoutes />}>
           <Route path="/admin/dashboard" element={<Dashboard />} />
-          <Route path="/admin/userlist" element={<UserList />} />
+          <Route path="/admin/userlist" element={<UserList/>} />
         </Route>
 
         <Route element={<PublicRoutes />}>

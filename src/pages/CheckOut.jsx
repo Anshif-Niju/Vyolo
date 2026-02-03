@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import CheckoutCard from '../components/CheckoutCard';
 import { useCart } from '../context/CartContext';
 import { useUser } from '../context/UserContext';
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 import api from '../service/api';
 
 function Checkout() {
