@@ -14,32 +14,33 @@ export function StatsProvider({ children }) {
     totalRevenue: 0,
     totalProducts: 0,
   });
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [userRes, productRes, ordersRes] =
-          await Promise.all([
-            api.get('/users'),
-            api.get('/products'),
-            api.get('/Bookings'),
-          ]);
+        const [userRes, productRes, ordersRes] = await Promise.all([
+          api.get('/users'),
+          api.get('/products'),
+          api.get('/Bookings'),
+        ]);
         const usersData = userRes.data;
         const productData = productRes.data;
         const bookingData = ordersRes.data;
 
-       const orderProduct=bookingData.flatMap((item)=>item.product)
+        const orderProduct = bookingData.flatMap((item) => item.product);
 
+        const filterUser = usersData.filter((user) => user.role !== 'admin');
 
-        const revenue =orderProduct.reduce(
+        const revenue = orderProduct.reduce(
           (total, item) => total + item.price * item.size || 0,
           0,
         );
 
         setStats({
-          users: usersData,
+          users: filterUser,
           product: productData,
           orders: bookingData,
-          totalUsers: usersData.length,
+          totalUsers: filterUser.length,
           totalRevenue: revenue,
           totalOrders: bookingData.length,
           totalProducts: productData.length,
@@ -51,8 +52,32 @@ export function StatsProvider({ children }) {
     fetchData();
   }, []);
 
+  const toggleActive = async (userID) => {
+    try {
+      const userToUpdate = stats.users.find((u) => u.id == userID);
+
+      if (!userToUpdate) return;
+
+      const newStatus = !userToUpdate.isActive;
+
+      await api.patch(`users/${userID}`, {
+        isActive: newStatus,
+      });
+
+      setStats((prevStats) => ({
+        ...prevStats,
+        users: prevStats.users.map((user) =>
+          user.id === userID ? { ...user, isActive: newStatus } : user,
+        ),
+      }));
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
-    <StatsContext.Provider value={{ stats }}>{children}</StatsContext.Provider>
+    <StatsContext.Provider value={{ stats, toggleActive }}>
+      {children}
+    </StatsContext.Provider>
   );
 }
 

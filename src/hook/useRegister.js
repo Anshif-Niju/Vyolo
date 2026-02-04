@@ -8,11 +8,14 @@ export const useRegister = () => {
 
   const nameRegex = /^[A-Za-z ]{2,}$/;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
-
+   
+  const lastActive=new Date().toDateString();
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
+    lastActive:lastActive,
     role: 'user',
   });
 

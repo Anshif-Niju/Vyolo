@@ -10,8 +10,9 @@ import Cart from './pages/Cart';
 import Wishlist from './pages/Wishlist';
 import CheckOut from './pages/CheckOut';
 import MyOrders from './pages/MyOrders';
-import Dashboard from './pages/admin/SideBar';
+import Dashboard from './pages/admin/Dashboard';
 import UserList from './pages/admin/UserList';
+import Orders from './pages/admin/Orders';
 import ScrollTop from './components/ScrollTop';
 import { Toaster } from 'react-hot-toast';
 
@@ -52,7 +53,8 @@ function App() {
       <Routes>
         <Route element={<ProtectedRoutes />}>
           <Route path="/admin/dashboard" element={<Dashboard />} />
-          <Route path="/admin/userlist" element={<UserList/>} />
+          <Route path="/admin/userlist" element={<UserList />} />
+          <Route path="/admin/orders" element={<Orders />} />
         </Route>
 
         <Route element={<PublicRoutes />}>

@@ -1,42 +1,37 @@
-import {useState,useEffect} from 'react'
-
-
-const dummyUsers = [
-  {
-    id: "U001",
-    name: "Anshif P",
-    email: "anshif@gmail.com",
-    lastActive: "2 Feb 2026",
-    active: true,
-  },
-  {
-    id: "U002",
-    name: "Rahul K",
-    email: "rahul@gmail.com",
-    lastActive: "28 Jan 2026",
-    active: false,
-  },
-];
+import { useState, useEffect } from 'react';
+import { useStats } from '../../context/StatsContext';
+import SideBar from './SideBar'
 
 function UserList() {
+  const { stats, toggleActive } = useStats();
+  const [search, setSearch] = useState('');
 
 
-    const [users, setUsers] = useState(dummyUsers);
+  const filterSearch = stats.users.filter((user) =>
+    user.name.toLowerCase().startsWith(search.toLowerCase()),
+  );
 
-  const toggleStatus = (id) => {
-    setUsers((prev) =>
-      prev.map((u) =>
-        u.id === id ? { ...u, active: !u.active } : u
-      )
-    );
-  };
   return (
-
-     <div className="min-h-screen bg-[#0f172a] p-8 text-white">
+    <>
+    <div className="min-h-screen bg-slate-900 text-slate-200 flex relative">
+    <SideBar/>
+    <div className="min-h-screen bg-[#0f172a] p-8 text-white">
       <h1 className="text-3xl text-center font-bold mb-8">Users</h1>
 
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {users.map((user) => (
+      <input
+        type="text"
+        placeholder="Search..."
+        className="my-3 mx-3  rounded px-3 text-black "
+        value={search}
+        onChange={(e) => {
+          setSearch(e.target.value);
+        }}
+        name=""
+        id=""
+      />
+      
+      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        {filterSearch.map((user) => (
           <div
             key={user.id}
             className="bg-slate-800 rounded-2xl shadow-lg p-6 hover:scale-[1.02] transition"
@@ -49,23 +44,19 @@ function UserList() {
             {/* Details */}
             <div className="space-y-2 text-sm text-slate-300">
               <p>
-                <span className="font-semibold text-slate-400">
-                  User ID:
-                </span>{" "}
+                <span className="font-semibold text-slate-400">User ID:</span>{' '}
                 {user.id}
               </p>
 
               <p>
-                <span className="font-semibold text-slate-400">
-                  Email:
-                </span>{" "}
+                <span className="font-semibold text-slate-400">Email:</span>{' '}
                 {user.email}
               </p>
 
               <p>
                 <span className="font-semibold text-slate-400">
                   Last Active:
-                </span>{" "}
+                </span>{' '}
                 {user.lastActive}
               </p>
             </div>
@@ -74,26 +65,29 @@ function UserList() {
             <div className="mt-5 flex items-center justify-between">
               <span
                 className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                  user.active
-                    ? "bg-green-500/20 text-green-400"
-                    : "bg-red-500/20 text-red-400"
+                  user.isActive
+                    ? 'bg-green-500/20 text-green-400'
+                    : 'bg-red-500/20 text-red-400'
                 }`}
               >
-                {user.active ? "Active" : "Non-Active"}
+                {user.isActive ? 'Active' : 'Non-Active'}
               </span>
 
               <button
-                onClick={() => toggleStatus(user.id)}
+                onClick={() => toggleActive(user.id)}
                 className="bg-cyan-500 hover:bg-cyan-600 px-4 py-2 rounded-lg text-sm font-semibold transition"
               >
-                {user.active ? "Non-Active" : "Active"}
+                {user.isActive ? 'Block' : 'Non-Block'}
               </button>
             </div>
           </div>
         ))}
       </div>
+      
     </div>
-  )
+    </div>
+    </>
+  );
 }
 
-export default UserList
+export default UserList;

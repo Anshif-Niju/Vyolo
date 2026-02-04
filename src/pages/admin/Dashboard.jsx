@@ -1,17 +1,20 @@
 import { useNavigate } from 'react-router-dom';
 import { useStats } from '../../context/StatsContext';
-function Main() {
+import SideBar from './SideBar'
+function Dashboard() {
   const navigate = useNavigate();
   const { stats } = useStats();
 
-  const recentOrders = stats.orders.slice(-3);
+  const recentOrders = stats.orders.slice(-3).reverse();
   const totalPrice = (product) => {
     const total = product.reduce((total, item) => total + item.price, 0);
     return total;
   };
 
-  console.log(recentOrders);
   return (
+        <div className="min-h-screen bg-slate-900 text-slate-200 flex relative">
+
+    <SideBar/>
     <main className="flex-1 p-6 md:p-8 w-full overflow-y-auto">
       <div className="flex justify-between items-center mb-8">
         <div className="flex items-center gap-4">
@@ -102,7 +105,8 @@ function Main() {
         </table>
       </div>
     </main>
+    </div>
   );
 }
 
-export default Main;
+export default Dashboard;

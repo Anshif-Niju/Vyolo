@@ -23,7 +23,7 @@ function Shop() {
   }, [selectCategory]);
 
   const filterProduct = product.filter((item) => {
-    return item.name.toLowerCase().includes(search.toLowerCase());
+    return item.name.toLowerCase().startsWith(search.toLowerCase());
   });
 
   return (

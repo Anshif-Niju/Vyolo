@@ -55,7 +55,7 @@ function Checkout() {
       }));
       const res = await api.post('/Bookings', {
         userId: user.id,
-        orderDate: new Date().toISOString(),
+        orderDate: new Date().toDateString(),
         product: cleanCart,
         address: formData,
         payment: payment,
