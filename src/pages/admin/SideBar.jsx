@@ -51,7 +51,7 @@ function SideBar() {
           <Link to="/admin/orders" className="block hover:text-cyan-400">
             Orders
           </Link>
-          <Link to="" className="block hover:text-cyan-400">
+          <Link to="/admin/products" className="block hover:text-cyan-400">
             Products
           </Link>
         </nav>

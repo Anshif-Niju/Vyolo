@@ -18,7 +18,7 @@ function Checkout() {
     address: '',
   });
   const [payment, setPayment] = useState(null);
-  const { cart,setCart, totalPrice } = useCart();
+  const { cart,setCart, totalPrice,clearCart } = useCart();
   const { user } = useUser();
 
   const handleChange = (e) => {
@@ -63,7 +63,8 @@ function Checkout() {
       });
 
       toast.success('Order Placed Succesfully');
-      setCart([])
+      // setCart([])
+      clearCart()
       navigate('/myorders');
     } catch (error) {
       console.log(error);

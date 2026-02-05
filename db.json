@@ -7,7 +7,7 @@
       "img": "",
       "password": "1234",
       "isActive": true,
-      "lastActive": "Wed Feb 04 2026",
+      "lastActive": "Thu Feb 05 2026",
       "role": "user"
     },
     {
@@ -25,7 +25,7 @@
       "email": "admin@gmail.com",
       "password": "1234",
       "isActive": true,
-      "lastActive": "Wed Feb 04 2026",
+      "lastActive": "Thu Feb 05 2026",
       "role": "admin"
     },
     {
@@ -54,6 +54,15 @@
       "isActive": true,
       "lastActive": "2026-02-02",
       "role": "user"
+    },
+    {
+      "id": "651c",
+      "name": "Amal Hisham",
+      "email": "amal@gmail.com",
+      "password": "amal123",
+      "lastActive": "Thu Feb 05 2026",
+      "role": "user",
+      "isActive": true
     }
   ],
   "products": [
@@ -65,7 +74,8 @@
       "rent": 1000,
       "description": " This Acer Nitro Lite 16 gaming laptop is designed to deliver a robust performance for gaming enthusiasts and casual gamers alike. Featuring a 40.60 cm (16) WUXGA IPS display, it offers vibrant colours and the 165 Hz refresh rate delivers fluid motion. Powered by an Intel Core i5-13420H processor and NVIDIA GeForce RTX 3050 GPU, this laptop allows you to have smooth and intense gaming sessions. With a versatile connectivity option, it facilitates easy connection to peripherals and networks.",
       "smallDes": " The Acer Nitro is a powerful...",
-      "category": "acer"
+      "category": "acer",
+      "isActive": true
     },
     {
       "id": "2",
@@ -75,7 +85,8 @@
       "rent": 800,
       "description": "Get a laptop that can handle several tasks well and knows your demands. The Dell Alienware laptop offers amazing performance across all of your favourite games and programmes thanks to its integrated 14-core 12th Gen Intel Core CPU. Additionally, NVIDIA GeForce RTX graphics, which feature NVIDIA Ray Tracing, NVIDIA Max-Q, and NVIDIA Dynamic Learning Super Sampling (DLSS) technology, let you push performance to its maximum limit. Enjoy lightning-fast gaming with ease thanks to the high-speed capabilities of Killer Wi-Fi 6 and USB 3.2 Gen 2 Type-C, which delivers data at up to 40 Gbps. Moreover, Dolby Vision takes advantage of information that studios and developers provide to deliver greater colour palettes and breathtaking visual effects. The scalable sound system provided by Dolby Atmos, on the other hand, provides each voice and instrument with its own space, allowing you to experience a game exactly as its creators intended.",
       "smallDes": " The DELL Alienware  is a good...",
-      "category": "dell"
+      "category": "dell",
+      "isActive": true
     },
     {
       "id": "3",
@@ -85,37 +96,41 @@
       "rent": null,
       "description": "This Lenovo LOQ Essential laptop comes with a low-power design, featuring 12th Gen Intel Core processors and 3050A NVIDIA GeForce RTX graphics. Crafted for students and first-time gamers, this laptop is powered by AI-based DLSS 3. Furthermore, you can enjoy a 16:9 FHD display, 144 Hz refresh rate, and 300 nits of brightness. Besides, this laptop offers an ergonomically designed keypad for maximum typing comfort, an efficient cooling system, a 57 Whr fast-charging battery, and a Lenovo Vantage.",
       "smallDes": "Lenovo LOQ is a Best....",
-      "category": "lenovo"
+      "category": "lenovo",
+      "isActive": true
     },
     {
       "id": "4",
-      "name": "ASUS TUF Gaming A15",
+      "name": "ASUS TUF Gaming A15 pro",
       "img": "/src/assets/product/Asus.png",
       "price": 72990,
       "rent": null,
       "description": "This ASUS TUF Gaming A15 delivers a smooth experience for gaming, streaming, and multitasking with an AMD Ryzen 7000 Series CPU and high frame rate graphics, despite memory limited to 4800MHz. It offers clear audio via dual speakers with customisable modes and an integrated equaliser. The laptop features comprehensive Self-cleaning Cooling 2.0 for reliability, a desktop-style RGB keyboard with highlighted WASD keys and a 20-million-press lifespan, and military-grade MIL-STD-810H durability. Upgrades are easy with a user-friendly pop-open screw for RAM and SSD expansion.",
       "smallDes": " The ASUS TUF Gaming A15 is a powerful...",
-      "category": "asus"
+      "category": "asus",
+      "isActive": true
     },
     {
       "id": "5",
-      "name": "Acer NITRO LITE ",
+      "name": "Acer NITRO LITE  pro",
       "img": "/src/assets/product/Acer.png",
       "price": 57990,
       "rent": 1000,
       "description": " This Acer Nitro Lite 16 gaming laptop is designed to deliver a robust performance for gaming enthusiasts and casual gamers alike. Featuring a 40.60 cm (16) WUXGA IPS display, it offers vibrant colours and the 165 Hz refresh rate delivers fluid motion. Powered by an Intel Core i5-13420H processor and NVIDIA GeForce RTX 3050 GPU, this laptop allows you to have smooth and intense gaming sessions. With a versatile connectivity option, it facilitates easy connection to peripherals and networks.",
       "smallDes": " The Acer Nitro is a powerful...",
-      "category": "acer"
+      "category": "acer",
+      "isActive": true
     },
     {
       "id": "6",
-      "name": "DELL Alienware ",
+      "name": "DELL Alienware  Pro",
       "img": "/src/assets/product/Dell.png",
       "price": 249990,
       "rent": 800,
       "description": "Get a laptop that can handle several tasks well and knows your demands. The Dell Alienware laptop offers amazing performance across all of your favourite games and programmes thanks to its integrated 14-core 12th Gen Intel Core CPU. Additionally, NVIDIA GeForce RTX graphics, which feature NVIDIA Ray Tracing, NVIDIA Max-Q, and NVIDIA Dynamic Learning Super Sampling (DLSS) technology, let you push performance to its maximum limit. Enjoy lightning-fast gaming with ease thanks to the high-speed capabilities of Killer Wi-Fi 6 and USB 3.2 Gen 2 Type-C, which delivers data at up to 40 Gbps. Moreover, Dolby Vision takes advantage of information that studios and developers provide to deliver greater colour palettes and breathtaking visual effects. The scalable sound system provided by Dolby Atmos, on the other hand, provides each voice and instrument with its own space, allowing you to experience a game exactly as its creators intended.",
       "smallDes": " The DELL Alienware  is a good...",
-      "category": "dell"
+      "category": "dell",
+      "isActive": true
     },
     {
       "id": "7",
@@ -125,7 +140,8 @@
       "rent": null,
       "description": "This Lenovo LOQ Essential laptop comes with a low-power design, featuring 12th Gen Intel Core processors and 3050A NVIDIA GeForce RTX graphics. Crafted for students and first-time gamers, this laptop is powered by AI-based DLSS 3. Furthermore, you can enjoy a 16:9 FHD display, 144 Hz refresh rate, and 300 nits of brightness. Besides, this laptop offers an ergonomically designed keypad for maximum typing comfort, an efficient cooling system, a 57 Whr fast-charging battery, and a Lenovo Vantage.",
       "smallDes": "Lenovo LOQ is a Best....",
-      "category": "lenovo"
+      "category": "lenovo",
+      "isActive": true
     },
     {
       "id": "8",
@@ -135,7 +151,8 @@
       "rent": null,
       "description": "This ASUS TUF Gaming A15 delivers a smooth experience for gaming, streaming, and multitasking with an AMD Ryzen 7000 Series CPU and high frame rate graphics, despite memory limited to 4800MHz. It offers clear audio via dual speakers with customisable modes and an integrated equaliser. The laptop features comprehensive Self-cleaning Cooling 2.0 for reliability, a desktop-style RGB keyboard with highlighted WASD keys and a 20-million-press lifespan, and military-grade MIL-STD-810H durability. Upgrades are easy with a user-friendly pop-open screw for RAM and SSD expansion.",
       "smallDes": " The ASUS TUF Gaming A15 is a powerful...",
-      "category": "asus"
+      "category": "asus",
+      "isActive": true
     },
     {
       "id": "9",
@@ -145,7 +162,8 @@
       "rent": 1000,
       "description": " This Acer Nitro Lite 16 gaming laptop is designed to deliver a robust performance for gaming enthusiasts and casual gamers alike. Featuring a 40.60 cm (16) WUXGA IPS display, it offers vibrant colours and the 165 Hz refresh rate delivers fluid motion. Powered by an Intel Core i5-13420H processor and NVIDIA GeForce RTX 3050 GPU, this laptop allows you to have smooth and intense gaming sessions. With a versatile connectivity option, it facilitates easy connection to peripherals and networks.",
       "smallDes": " The Acer Nitro is a powerful...",
-      "category": "acer"
+      "category": "acer",
+      "isActive": true
     },
     {
       "id": "10",
@@ -155,7 +173,8 @@
       "rent": 800,
       "description": "Get a laptop that can handle several tasks well and knows your demands. The Dell Alienware laptop offers amazing performance across all of your favourite games and programmes thanks to its integrated 14-core 12th Gen Intel Core CPU. Additionally, NVIDIA GeForce RTX graphics, which feature NVIDIA Ray Tracing, NVIDIA Max-Q, and NVIDIA Dynamic Learning Super Sampling (DLSS) technology, let you push performance to its maximum limit. Enjoy lightning-fast gaming with ease thanks to the high-speed capabilities of Killer Wi-Fi 6 and USB 3.2 Gen 2 Type-C, which delivers data at up to 40 Gbps. Moreover, Dolby Vision takes advantage of information that studios and developers provide to deliver greater colour palettes and breathtaking visual effects. The scalable sound system provided by Dolby Atmos, on the other hand, provides each voice and instrument with its own space, allowing you to experience a game exactly as its creators intended.",
       "smallDes": " The DELL Alienware  is a good...",
-      "category": "dell"
+      "category": "dell",
+      "isActive": true
     },
     {
       "id": "11",
@@ -165,7 +184,8 @@
       "rent": null,
       "description": "This Lenovo LOQ Essential laptop comes with a low-power design, featuring 12th Gen Intel Core processors and 3050A NVIDIA GeForce RTX graphics. Crafted for students and first-time gamers, this laptop is powered by AI-based DLSS 3. Furthermore, you can enjoy a 16:9 FHD display, 144 Hz refresh rate, and 300 nits of brightness. Besides, this laptop offers an ergonomically designed keypad for maximum typing comfort, an efficient cooling system, a 57 Whr fast-charging battery, and a Lenovo Vantage.",
       "smallDes": "Lenovo LOQ is a Best....",
-      "category": "lenovo"
+      "category": "lenovo",
+      "isActive": true
     },
     {
       "id": "12",
@@ -175,7 +195,28 @@
       "rent": null,
       "description": "This ASUS TUF Gaming A15 delivers a smooth experience for gaming, streaming, and multitasking with an AMD Ryzen 7000 Series CPU and high frame rate graphics, despite memory limited to 4800MHz. It offers clear audio via dual speakers with customisable modes and an integrated equaliser. The laptop features comprehensive Self-cleaning Cooling 2.0 for reliability, a desktop-style RGB keyboard with highlighted WASD keys and a 20-million-press lifespan, and military-grade MIL-STD-810H durability. Upgrades are easy with a user-friendly pop-open screw for RAM and SSD expansion.",
       "smallDes": " The ASUS TUF Gaming A15 is a powerful...",
-      "category": "asus"
+      "category": "asus",
+      "isActive": true
+    },
+    {
+      "id": "3210",
+      "name": "New Product",
+      "img": "/src/assets/product/Acer.png",
+      "price": "123345",
+      "description": "This ASUS TUF Gaming A15 delivers a smooth experience for gaming, streaming, and multitasking with an AMD Ryzen 7000 Series CPU and high frame rate graphics, despite memory limited to 4800MHz. It offers clear audio via dual speakers with customisable modes and an integrated equaliser. The laptop features comprehensive Self-cleaning Cooling 2.0 for reliability, a desktop-style RGB keyboard with highlighted WASD keys and a 20-million-press lifespan, and military-grade MIL-STD-810H durability. Upgrades are easy with a user-friendly pop-open screw for RAM and SSD expansion.",
+      "smallDes": "This Good perfomance...",
+      "category": "Dell",
+      "isActive": true
+    },
+    {
+      "id": "db93",
+      "name": "New Product 2",
+      "img": "/src/assets/product/Lenovo.png",
+      "price": "12345678",
+      "description": "This Lenovo LOQ Essential laptop comes with a low-power design, featuring 12th Gen Intel Core processors and 3050A NVIDIA GeForce RTX graphics. Crafted for students and first-time gamers, this laptop is powered by AI-based DLSS 3. Furthermore, you can enjoy a 16:9 FHD display, 144 Hz refresh rate, and 300 nits of brightness. Besides, this laptop offers an ergonomically designed keypad for maximum typing comfort, an efficient cooling system, a 57 Whr fast-charging battery, and a Lenovo Vantage.",
+      "smallDes": "This IS very Well...",
+      "category": "Lenovo",
+      "isActive": true
     }
   ],
   "Cart": [
@@ -268,51 +309,6 @@
         "category": "dell"
       },
       "size": 5
-    },
-    {
-      "id": "8d91",
-      "userId": "9eb7",
-      "product": {
-        "id": "2",
-        "name": "DELL Alienware ",
-        "img": "/src/assets/product/Dell.png",
-        "price": 249990,
-        "rent": 800,
-        "description": "Get a laptop that can handle several tasks well and knows your demands. The Dell Alienware laptop offers amazing performance across all of your favourite games and programmes thanks to its integrated 14-core 12th Gen Intel Core CPU. Additionally, NVIDIA GeForce RTX graphics, which feature NVIDIA Ray Tracing, NVIDIA Max-Q, and NVIDIA Dynamic Learning Super Sampling (DLSS) technology, let you push performance to its maximum limit. Enjoy lightning-fast gaming with ease thanks to the high-speed capabilities of Killer Wi-Fi 6 and USB 3.2 Gen 2 Type-C, which delivers data at up to 40 Gbps. Moreover, Dolby Vision takes advantage of information that studios and developers provide to deliver greater colour palettes and breathtaking visual effects. The scalable sound system provided by Dolby Atmos, on the other hand, provides each voice and instrument with its own space, allowing you to experience a game exactly as its creators intended.",
-        "smallDes": " The DELL Alienware  is a good...",
-        "category": "dell"
-      },
-      "size": 8
-    },
-    {
-      "id": "bb51",
-      "userId": "9eb7",
-      "product": {
-        "id": "1",
-        "name": "Acer NITRO LITE ",
-        "img": "/src/assets/product/Acer.png",
-        "price": 57990,
-        "rent": 1000,
-        "description": " This Acer Nitro Lite 16 gaming laptop is designed to deliver a robust performance for gaming enthusiasts and casual gamers alike. Featuring a 40.60 cm (16) WUXGA IPS display, it offers vibrant colours and the 165 Hz refresh rate delivers fluid motion. Powered by an Intel Core i5-13420H processor and NVIDIA GeForce RTX 3050 GPU, this laptop allows you to have smooth and intense gaming sessions. With a versatile connectivity option, it facilitates easy connection to peripherals and networks.",
-        "smallDes": " The Acer Nitro is a powerful...",
-        "category": "acer"
-      },
-      "size": 5
-    },
-    {
-      "id": "1cd1",
-      "userId": "9eb7",
-      "product": {
-        "id": "4",
-        "name": "ASUS TUF Gaming A15",
-        "img": "/src/assets/product/Asus.png",
-        "price": 72990,
-        "rent": null,
-        "description": "This ASUS TUF Gaming A15 delivers a smooth experience for gaming, streaming, and multitasking with an AMD Ryzen 7000 Series CPU and high frame rate graphics, despite memory limited to 4800MHz. It offers clear audio via dual speakers with customisable modes and an integrated equaliser. The laptop features comprehensive Self-cleaning Cooling 2.0 for reliability, a desktop-style RGB keyboard with highlighted WASD keys and a 20-million-press lifespan, and military-grade MIL-STD-810H durability. Upgrades are easy with a user-friendly pop-open screw for RAM and SSD expansion.",
-        "smallDes": " The ASUS TUF Gaming A15 is a powerful...",
-        "category": "asus"
-      },
-      "size": 1
     }
   ],
   "Bookings": [
@@ -421,6 +417,223 @@
       ],
       "address": {
         "name": "Anshif P",
+        "email": "user@gmail.com",
+        "number": "1234567890",
+        "city": "Manalpadam",
+        "address": "98VQ+X4H\nKambalakallu"
+      },
+      "payment": "UPI",
+      "status": "Delivery Soon"
+    },
+    {
+      "id": "59f3",
+      "userId": "9eb7",
+      "orderDate": "Wed Feb 04 2026",
+      "product": [
+        {
+          "productId": "2",
+          "name": "DELL Alienware ",
+          "price": 249990,
+          "img": "/src/assets/product/Dell.png",
+          "size": 8
+        },
+        {
+          "productId": "1",
+          "name": "Acer NITRO LITE ",
+          "price": 57990,
+          "img": "/src/assets/product/Acer.png",
+          "size": 5
+        },
+        {
+          "productId": "4",
+          "name": "ASUS TUF Gaming A15",
+          "price": 72990,
+          "img": "/src/assets/product/Asus.png",
+          "size": 1
+        },
+        {
+          "productId": "10",
+          "name": "DELL Alienware ",
+          "price": 249990,
+          "img": "/src/assets/product/Dell.png",
+          "size": 10
+        }
+      ],
+      "address": {
+        "name": "Anshif P",
+        "email": "user@gmail.com",
+        "number": "1234567890",
+        "city": "Manalpadam",
+        "address": "98VQ+X4H\nKambalakallu"
+      },
+      "payment": "CARD",
+      "status": "Delivery Soon"
+    },
+    {
+      "id": "70e4",
+      "userId": "9eb7",
+      "orderDate": "Wed Feb 04 2026",
+      "product": [
+        {
+          "productId": "2",
+          "name": "DELL Alienware ",
+          "price": 249990,
+          "img": "/src/assets/product/Dell.png",
+          "size": 10
+        },
+        {
+          "productId": "1",
+          "name": "Acer NITRO LITE ",
+          "price": 57990,
+          "img": "/src/assets/product/Acer.png",
+          "size": 5
+        },
+        {
+          "productId": "4",
+          "name": "ASUS TUF Gaming A15",
+          "price": 72990,
+          "img": "/src/assets/product/Asus.png",
+          "size": 1
+        },
+        {
+          "productId": "10",
+          "name": "DELL Alienware ",
+          "price": 249990,
+          "img": "/src/assets/product/Dell.png",
+          "size": 10
+        }
+      ],
+      "address": {
+        "name": "Anshif",
+        "email": "anshifp369@gmail.com",
+        "number": "1234567890",
+        "city": "Manalpadam",
+        "address": "98VQ+X4H\nKambalakallu"
+      },
+      "payment": "CARD",
+      "status": "Delivery Soon"
+    },
+    {
+      "id": "8276",
+      "userId": "9eb7",
+      "orderDate": "Wed Feb 04 2026",
+      "product": [
+        {
+          "productId": "2",
+          "name": "DELL Alienware ",
+          "price": 249990,
+          "img": "/src/assets/product/Dell.png",
+          "size": 1
+        }
+      ],
+      "address": {
+        "name": "Anshif",
+        "email": "example@gmail.com",
+        "number": "1234567890",
+        "city": "Manalpadam",
+        "address": "98VQ+X4H\nKambalakallu"
+      },
+      "payment": "COD",
+      "status": "Delivery Soon"
+    },
+    {
+      "id": "5c1c",
+      "userId": "9eb7",
+      "orderDate": "Thu Feb 05 2026",
+      "product": [
+        {
+          "productId": "7",
+          "name": "Lenovo LOQ",
+          "price": 68980,
+          "img": "/src/assets/product/Lenovo.png",
+          "size": 1
+        }
+      ],
+      "address": {
+        "name": "Anshif P",
+        "email": "user@gmail.com",
+        "number": "1234567890",
+        "city": "Manalpadam",
+        "address": "98VQ+X4H\nKambalakallu"
+      },
+      "payment": "CARD",
+      "status": "Delivery Soon"
+    },
+    {
+      "id": "3d2a",
+      "userId": "9eb7",
+      "orderDate": "Thu Feb 05 2026",
+      "product": [
+        {
+          "productId": "1",
+          "name": "Acer NITRO LITE ",
+          "price": 57990,
+          "img": "/src/assets/product/Acer.png",
+          "size": 1
+        },
+        {
+          "productId": "2",
+          "name": "DELL Alienware ",
+          "price": 249990,
+          "img": "/src/assets/product/Dell.png",
+          "size": 1
+        }
+      ],
+      "address": {
+        "name": "Anshif P",
+        "email": "amal@gmail.com",
+        "number": "1234567890",
+        "city": "Manalpadam",
+        "address": "98VQ+X4H\nKambalakallu"
+      },
+      "payment": "UPI",
+      "status": "Delivery Soon"
+    },
+    {
+      "id": "0ced",
+      "userId": "651c",
+      "orderDate": "Thu Feb 05 2026",
+      "product": [
+        {
+          "productId": "2",
+          "name": "DELL Alienware ",
+          "price": 249990,
+          "img": "/src/assets/product/Dell.png",
+          "size": 1
+        }
+      ],
+      "address": {
+        "name": "Amal Hisham",
+        "email": "amal@gmail.com",
+        "number": "1234567890",
+        "city": "Manalpadam",
+        "address": "98VQ+X4H\nKambalakallu"
+      },
+      "payment": "COD",
+      "status": "Delivery Soon"
+    },
+    {
+      "id": "fb74",
+      "userId": "9eb7",
+      "orderDate": "Thu Feb 05 2026",
+      "product": [
+        {
+          "productId": "2",
+          "name": "DELL Alienware ",
+          "price": 249990,
+          "img": "/src/assets/product/Dell.png",
+          "size": 1
+        },
+        {
+          "productId": "8",
+          "name": "ASUS TUF Gaming A15",
+          "price": 72990,
+          "img": "/src/assets/product/Asus.png",
+          "size": 1
+        }
+      ],
+      "address": {
+        "name": "Anshif",
         "email": "user@gmail.com",
         "number": "1234567890",
         "city": "Manalpadam",
@@ -549,6 +762,37 @@
         "description": "Get a laptop that can handle several tasks well and knows your demands. The Dell Alienware laptop offers amazing performance across all of your favourite games and programmes thanks to its integrated 14-core 12th Gen Intel Core CPU. Additionally, NVIDIA GeForce RTX graphics, which feature NVIDIA Ray Tracing, NVIDIA Max-Q, and NVIDIA Dynamic Learning Super Sampling (DLSS) technology, let you push performance to its maximum limit. Enjoy lightning-fast gaming with ease thanks to the high-speed capabilities of Killer Wi-Fi 6 and USB 3.2 Gen 2 Type-C, which delivers data at up to 40 Gbps. Moreover, Dolby Vision takes advantage of information that studios and developers provide to deliver greater colour palettes and breathtaking visual effects. The scalable sound system provided by Dolby Atmos, on the other hand, provides each voice and instrument with its own space, allowing you to experience a game exactly as its creators intended.",
         "smallDes": " The DELL Alienware  is a good...",
         "category": "dell"
+      }
+    },
+    {
+      "id": "aaf3",
+      "userId": "9eb7",
+      "productId": "3",
+      "product": {
+        "id": "3",
+        "name": "Lenovo LOQ",
+        "img": "/src/assets/product/Lenovo.png",
+        "price": 68980,
+        "rent": null,
+        "description": "This Lenovo LOQ Essential laptop comes with a low-power design, featuring 12th Gen Intel Core processors and 3050A NVIDIA GeForce RTX graphics. Crafted for students and first-time gamers, this laptop is powered by AI-based DLSS 3. Furthermore, you can enjoy a 16:9 FHD display, 144 Hz refresh rate, and 300 nits of brightness. Besides, this laptop offers an ergonomically designed keypad for maximum typing comfort, an efficient cooling system, a 57 Whr fast-charging battery, and a Lenovo Vantage.",
+        "smallDes": "Lenovo LOQ is a Best....",
+        "category": "lenovo"
+      }
+    },
+    {
+      "id": "704c",
+      "userId": "9eb7",
+      "productId": "2",
+      "product": {
+        "id": "2",
+        "name": "DELL Alienware ",
+        "img": "/src/assets/product/Dell.png",
+        "price": 249990,
+        "rent": 800,
+        "description": "Get a laptop that can handle several tasks well and knows your demands. The Dell Alienware laptop offers amazing performance across all of your favourite games and programmes thanks to its integrated 14-core 12th Gen Intel Core CPU. Additionally, NVIDIA GeForce RTX graphics, which feature NVIDIA Ray Tracing, NVIDIA Max-Q, and NVIDIA Dynamic Learning Super Sampling (DLSS) technology, let you push performance to its maximum limit. Enjoy lightning-fast gaming with ease thanks to the high-speed capabilities of Killer Wi-Fi 6 and USB 3.2 Gen 2 Type-C, which delivers data at up to 40 Gbps. Moreover, Dolby Vision takes advantage of information that studios and developers provide to deliver greater colour palettes and breathtaking visual effects. The scalable sound system provided by Dolby Atmos, on the other hand, provides each voice and instrument with its own space, allowing you to experience a game exactly as its creators intended.",
+        "smallDes": " The DELL Alienware  is a good...",
+        "category": "dell",
+        "isActive": true
       }
     }
   ],

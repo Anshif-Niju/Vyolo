@@ -13,6 +13,7 @@ import MyOrders from './pages/MyOrders';
 import Dashboard from './pages/admin/Dashboard';
 import UserList from './pages/admin/UserList';
 import Orders from './pages/admin/Orders';
+import Products from './pages/admin/Products';
 import ScrollTop from './components/ScrollTop';
 import { Toaster } from 'react-hot-toast';
 
@@ -28,9 +29,10 @@ const PublicRoutes = () => {
   const user = JSON.parse(sessionStorage.getItem('user'));
   if (user) {
     if (user.role == 'admin') {
-      <Navigate to="/admin/dashboard" />;
+     return <Navigate to="/admin/dashboard" replace />;
     }
-    <Navigate to="/home" />;
+    <Navigate to="/home" replace />;
+    
   }
   return <Outlet />;
 };
@@ -38,7 +40,7 @@ const PublicRoutes = () => {
 const PrivateRoutes = () => {
   const user = JSON.parse(sessionStorage.getItem('user'));
   if (!user) {
-    <Navigate to="/login" />;
+    <Navigate to="/login"  />;
   }
   if (user.role === 'admin') return <Navigate to="/admin/dashboard" />;
   return <Outlet />;
@@ -48,13 +50,14 @@ function App() {
   return (
     <>
       <ScrollTop />
-      <Toaster position="top-right" reverseOrder={false}></Toaster>
+      <Toaster position="top-center" reverseOrder={false}></Toaster>
 
       <Routes>
         <Route element={<ProtectedRoutes />}>
           <Route path="/admin/dashboard" element={<Dashboard />} />
           <Route path="/admin/userlist" element={<UserList />} />
           <Route path="/admin/orders" element={<Orders />} />
+          <Route path="/admin/products" element={<Products />} />
         </Route>
 
         <Route element={<PublicRoutes />}>

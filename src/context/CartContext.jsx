@@ -67,6 +67,21 @@ export const CartProvider = ({ children }) => {
   };
 
 
+
+  const clearCart = async () => {
+    try {
+      const deletePromises = cart.map((item) => 
+        api.delete(`/Cart/${item.id}`)
+      );
+      await Promise.all(deletePromises);
+
+      setCart([]);
+      
+    } catch (error) {
+      toast.error("Error clearing cart");
+    }
+  };
+
   const removeCart = async (cartId) => {
     try {
       await api.delete(`/Cart/${cartId}`);
@@ -94,6 +109,7 @@ export const CartProvider = ({ children }) => {
         setCart,
         removeCart,
         addProduct,
+        clearCart
       }}
     >
       {children}

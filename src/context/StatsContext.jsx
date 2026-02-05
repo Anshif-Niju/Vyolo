@@ -75,7 +75,7 @@ export function StatsProvider({ children }) {
     }
   };
   return (
-    <StatsContext.Provider value={{ stats, toggleActive }}>
+    <StatsContext.Provider value={{ stats, toggleActive, setStats }}>
       {children}
     </StatsContext.Provider>
   );
