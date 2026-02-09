@@ -28,7 +28,7 @@ function Login() {
               type="email"
               placeholder="you@example.com"
               name="email"
-              value={formData.email}
+              value={formData.email|| ''}
               onChange={handleChange}
               className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 text-[#1D3557] font-bold placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#457b9d] focus:border-transparent transition-all duration-300"
             />
@@ -42,7 +42,7 @@ function Login() {
               type="password"
               placeholder="••••••••"
               name="pass"
-              value={formData.pass}
+              value={formData.pass || ''}
               onChange={handleChange}
               className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 text-[#1D3557] font-bold placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#457b9d] focus:border-transparent transition-all duration-300"
             />

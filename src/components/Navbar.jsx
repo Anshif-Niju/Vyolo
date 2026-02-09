@@ -4,6 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import vectrLogo from '../assets/img/Vectr.png';
 import { useCart } from '../context/CartContext';
 import { useUser } from '../context/UserContext';
+import { useWishlist } from '../context/WishlistContext';
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -11,6 +12,7 @@ export default function Navbar() {
   const { cartLength } = useCart();
   const [open, setOpen] = useState(false);
   const [profileOpen, setprofileOpen] = useState(false);
+  const {wishlistLength}=useWishlist()
 
   const user = JSON.parse(sessionStorage.getItem('user'));
 
@@ -123,9 +125,9 @@ export default function Navbar() {
               <div className="h-10 w-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center justify-center">
                 <FaRegHeart />
               </div>
-              {/* <span className="absolute top-[-4px] right-[-5px] h-5 w-5 rounded-full bg-[#1D3557] text-white text-[10px] font-bold flex items-center justify-center border-2 border-white">
-                0
-              </span> */}
+              <span className="absolute top-[-4px] right-[-5px] h-5 w-5 rounded-full bg-[#1D3557] text-white text-[10px] font-bold flex items-center justify-center border-2 border-white">
+                {wishlistLength}
+              </span>
             </NavLink>
             </div>
 

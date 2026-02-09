@@ -25,7 +25,7 @@ function Dashboard() {
     return product.reduce((total, item) => total + item.price, 0);
   };
 
-  const graphData = stats.orders.slice(-7).map((order) => ({
+  const graphData = stats.orders.slice(-5).map((order) => ({
     name: order.orderDate.split(',')[0],
     revenue: totalPrice(order.product),
   }));

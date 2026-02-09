@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getUserByEmail } from '../service/authService';
-import api from "../service/api"
+import api from '../service/api';
 import { useUser } from '../context/UserContext';
 import { toast } from 'react-hot-toast';
 
@@ -58,28 +58,28 @@ export const useLogin = () => {
       }
 
       const loggedUser = res[0];
-      const lastActiveDate=new Date().toDateString();
-
+      const lastActiveDate = new Date().toDateString();
 
       if (loggedUser.password !== formData.pass) {
         toast.error('Incorrect password');
-        setFormData({
+        setFormData((prev) => ({
+          ...prev,
           pass: '',
-        });
+        }));
         return;
       }
-      if (loggedUser.isActive==false) {
+      if (loggedUser.isActive == false) {
         toast.error('Access Denied: Your account has been blocked by Admin.');
         return;
       }
-      
-      await api.patch(`/users/${loggedUser.id}`,{
-        lastActive: lastActiveDate
-      })
-      const newUpdate={
+
+      await api.patch(`/users/${loggedUser.id}`, {
+        lastActive: lastActiveDate,
+      });
+      const newUpdate = {
         ...loggedUser,
-        lastActive:lastActiveDate
-      }
+        lastActive: lastActiveDate,
+      };
       login(newUpdate);
     } catch (error) {
       toast.error('The Server is not responding....');

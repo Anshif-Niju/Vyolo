@@ -1,69 +1,28 @@
-import { useState, useEffect } from 'react';
-import api from '../service/api';
 import { Heart } from 'lucide-react';
-import { useUser } from '../context/UserContext';
+import { useWishlist } from '../context/WishlistContext';
 
 function WishlistButton({ product }) {
-  const [liked, setLiked] = useState(false);
-  const [wishListId, setWishListId] = useState(null);
+  const { toggleWishlist, isInWishlist } = useWishlist();
+  
+  const isLiked = isInWishlist(product.id);
 
-  const { user } = useUser();
-
-  useEffect(() => {
-    const checkWishlist = async () => {
-      if (!user?.id || !product?.id) return;
-
-      try {
-        const res = await api.get(
-          `/wishlist?userId=${user.id}&productId=${product.id}`,
-        );
-        if (res.data.length > 0) {
-          setLiked(true);
-          setWishListId(res.data[0].id);
-        }
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    checkWishlist();
-  }, [user?.id, product?.id]);
-
-  const toggleWishlist = async () => {
-    if (!user) {
-      alert('Please Login');
-      return;
-    }
-
-    try {
-      if (!liked) {
-        const res = await api.post('/wishlist', {
-          userId: user.id,
-          productId: product.id,
-          product: product,
-        });
-
-        setWishListId(res.data.id);
-        setLiked(true);
-      } else {
-        if (wishListId) {
-          await api.delete(`/wishlist/${wishListId}`);
-          setLiked(false);
-          setWishListId(null);
-        }
-      }
-    } catch (err) {
-      console.error(err);
-    }
+  const handleToggle = (e) => {
+    e.preventDefault(); 
+    e.stopPropagation();
+    toggleWishlist(product);
   };
 
   return (
     <button
-      onClick={toggleWishlist}
-      className="p-2 rounded-full bg-white shadow-md hover:scale-110 transition"
+      onClick={handleToggle}
+      className="p-2 rounded-full bg-white shadow-md hover:scale-110 transition z-10"
+      aria-label="Toggle Wishlist"
     >
       <Heart
         size={22}
-        className={liked ? 'fill-red-500 text-red-500' : 'text-gray-400'}
+        className={`transition-colors duration-300 ${
+          isLiked ? 'fill-red-500 text-red-500' : 'text-gray-400'
+        }`}
       />
     </button>
   );

@@ -17,6 +17,7 @@ export const useRegister = () => {
     password: '',
     lastActive:lastActive,
     role: 'user',
+    isActive:true
   });
 
   const [error, setError] = useState('');

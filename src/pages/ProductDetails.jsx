@@ -191,7 +191,7 @@ function ProductDetails() {
               <ul className="text-slate-600 space-y-2 font-medium">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#457b9d]"></span>
-                  Processor: Apple M4 Chip
+                  Processor:  Intel i7
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#457b9d]"></span>

@@ -33,8 +33,7 @@ export const CartProvider = ({ children }) => {
       toast.success('please Login');
     }
     try {
-      const res = await api.get(
-        `/Cart?userId=${user.id}&product.id=${product.id}`,
+      const res = await api.get(`/Cart?userId=${user.id}&product.id=${product.id}`,
       );
       if (res.data.length > 0) {
         const cartItem = res.data[0];

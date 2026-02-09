@@ -34,13 +34,12 @@ function Register() {
 
           <div className="group">
             <input
-              type="email"
+              type="text"
               name="email"
               placeholder="Email Address"
               value={formData.email}
               onChange={handleChange}
               className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 text-[#1D3557] font-bold placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#457b9d] focus:border-transparent transition-all duration-300"
-              required
             />
           </div>
 

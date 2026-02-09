@@ -46,7 +46,7 @@ function Checkout() {
       return;
     }
     try {
-      const cleanCart = cart.map((item) => ({
+      const addCart = cart.map((item) => ({
         productId: item.product.id,
         name: item.product.name,
         price: item.product.price,
@@ -56,7 +56,7 @@ function Checkout() {
       const res = await api.post('/Bookings', {
         userId: user.id,
         orderDate: new Date().toDateString(),
-        product: cleanCart,
+        product: addCart,
         address: formData,
         payment: payment,
         status: 'Delivery Soon',
