@@ -6,7 +6,7 @@
       "email": "user@gmail.com",
       "img": "",
       "password": "1234",
-      "isActive": true,
+      "isActive": false,
       "lastActive": "Mon Feb 09 2026",
       "role": "user"
     },
@@ -25,7 +25,7 @@
       "email": "admin@gmail.com",
       "password": "1234",
       "isActive": true,
-      "lastActive": "Mon Feb 09 2026",
+      "lastActive": "Tue Feb 10 2026",
       "role": "admin"
     },
     {
@@ -140,7 +140,7 @@
   "products": [
     {
       "id": "1",
-      "name": "Acer NITRO LITE ",
+      "name": "Dell",
       "img": "/src/assets/product/Acer.png",
       "price": 57990,
       "rent": 1000,
@@ -307,6 +307,16 @@
       "price": "543342",
       "description": "srxdfcgvhbjnm,",
       "smallDes": "sxdfgcvhbjn",
+      "category": "Lenovo",
+      "isActive": true
+    },
+    {
+      "id": "92d6",
+      "name": "New PROduct",
+      "img": "",
+      "price": "123456",
+      "description": "very better",
+      "smallDes": "thus good",
       "category": "Lenovo",
       "isActive": true
     }

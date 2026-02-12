@@ -49,35 +49,35 @@ function Cart() {
           )}
         </div>
 
-        {(cart.length > 0) ? (
+        {cart.length > 0 ? (
           <div className="items-center min-h-screen">
-          <div className="bg-white border border-slate-200 p-8 rounded-[2.5rem] h-fit shadow-xl shadow-blue-900/5">
-            <h2 className="text-2xl font-black text-[#1D3557] mb-6">
-              Order Summary
-            </h2>
+            <div className="bg-white border border-slate-200 p-8 rounded-[2.5rem] h-fit shadow-xl shadow-blue-900/5">
+              <h2 className="text-2xl font-black text-[#1D3557] mb-6">
+                Order Summary
+              </h2>
 
-            <div className="flex justify-between text-slate-500 font-medium mb-3">
-              <span>Subtotal</span>
-              <span className="text-slate-800 font-bold">{totalPrice}</span>
+              <div className="flex justify-between text-slate-500 font-medium mb-3">
+                <span>Subtotal</span>
+                <span className="text-slate-800 font-bold">{totalPrice}</span>
+              </div>
+
+              <div className="flex justify-between text-slate-500 font-medium mb-6">
+                <span>Delivery</span>
+                <span className="text-slate-800 font-bold">{delivery}</span>
+              </div>
+
+              <div className="flex justify-between text-xl font-black mt-4 pt-4 border-t border-slate-100 text-[#1D3557]">
+                <span>Total</span>
+                <span className="text-[#457b9d]">{totalPrice + delivery}</span>
+              </div>
+
+              <Link
+                to="/checkOut"
+                className="w-[100px] block m-auto text-center bg-[#457b9d] hover:bg-[#36607a] text-white py-4 rounded-xl font-bold shadow-lg shadow-blue-900/20 hover:-translate-y-1 transition-all duration-300"
+              >
+                Checkout
+              </Link>
             </div>
-
-            <div className="flex justify-between text-slate-500 font-medium mb-6">
-              <span>Delivery</span>
-              <span className="text-slate-800 font-bold">{delivery}</span>
-            </div>
-
-            <div className="flex justify-between text-xl font-black mt-4 pt-4 border-t border-slate-100 text-[#1D3557]">
-              <span>Total</span>
-              <span className="text-[#457b9d]">{totalPrice + delivery}</span>
-            </div>
-
-            <Link
-              to="/checkOut"
-              className="w-[100px] block m-auto text-center bg-[#457b9d] hover:bg-[#36607a] text-white py-4 rounded-xl font-bold shadow-lg shadow-blue-900/20 hover:-translate-y-1 transition-all duration-300"
-            >
-              Checkout
-            </Link>
-          </div>
           </div>
         ) : null}
       </div>

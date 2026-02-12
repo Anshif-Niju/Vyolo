@@ -1,7 +1,14 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useMemo,
+  useCallback,
+} from 'react';
 import api from '../service/api';
 import { useUser } from '../context/UserContext';
-import {toast} from 'react-hot-toast';
+import { toast } from 'react-hot-toast';
 
 const CartContext = createContext();
 
@@ -13,12 +20,12 @@ export const CartProvider = ({ children }) => {
     const fetchCart = async () => {
       try {
         if (!user) {
-          setCart([])
+          setCart([]);
           return;
         }
 
         const res = await api.get(`/Cart?userId=${user.id}`);
-          setCart(res.data);
+        setCart(res.data);
       } catch (error) {
         console.error(error);
       }
@@ -27,13 +34,13 @@ export const CartProvider = ({ children }) => {
     fetchCart();
   }, [user]);
 
-  
   const addProduct = async (product, qty) => {
     if (!user) {
       toast.success('please Login');
     }
     try {
-      const res = await api.get(`/Cart?userId=${user.id}&product.id=${product.id}`,
+      const res = await api.get(
+        `/Cart?userId=${user.id}&product.id=${product.id}`,
       );
       if (res.data.length > 0) {
         const cartItem = res.data[0];
@@ -65,19 +72,14 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-
-
   const clearCart = async () => {
     try {
-      const deletePromises = cart.map((item) => 
-        api.delete(`/Cart/${item.id}`)
-      );
+      const deletePromises = cart.map((item) => api.delete(`/Cart/${item.id}`));
       await Promise.all(deletePromises);
 
       setCart([]);
-      
     } catch (error) {
-      toast.error("Error clearing cart");
+      toast.error('Error clearing cart');
     }
   };
 
@@ -92,11 +94,15 @@ export const CartProvider = ({ children }) => {
 
   const cartLength = cart.length;
 
-  const totalPrice = cart.reduce((total, item) => {
-    return total + item.product.price * item.size;
-  }, 0);
+  const totalPrice = useMemo(() => {
+    cart.reduce((total, item) => {
+      return total + item.product.price * item.size;
+    }, 0);
+  }, [cart]);
 
-  const delivery = cart.length==0?0:totalPrice > 100000 ? 0 : 199;
+  const delivery = useMemo(() => {
+    cart.length == 0 ? 0 : totalPrice > 100000 ? 0 : 199;
+  }, [cart.length, totalPrice]);
 
   return (
     <CartContext.Provider
@@ -108,7 +114,7 @@ export const CartProvider = ({ children }) => {
         setCart,
         removeCart,
         addProduct,
-        clearCart
+        clearCart,
       }}
     >
       {children}
